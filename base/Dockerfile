@@ -9,7 +9,6 @@ ENV NODE_VERSION ${NODE_VERSION:-4.7.0}
 ONBUILD ENV NODE_VERSION ${NODE_VERSION:-4.7.0}
 
 RUN bash $METEORD_DIR/lib/install_base.sh
-RUN bash $METEORD_DIR/lib/install_libvips.sh
 RUN bash $METEORD_DIR/lib/install_node.sh
 RUN bash $METEORD_DIR/lib/install_phantomjs.sh
 RUN bash $METEORD_DIR/lib/cleanup.sh

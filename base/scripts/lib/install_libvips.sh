@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 # Use of this script is deprecated
 

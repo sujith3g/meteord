@@ -20,6 +20,11 @@ else
   exit 1
 fi
 
+if [ -d /startup ]; then
+  echo "=> runnning startup script /startup/start.sh"
+  source /startup/start.sh
+fi
+
 if [[ $REBUILD_NPM_MODULES ]]; then
   echo "=> abernix/meteord:bin-build is NOT TESTED AT ALL (and maybe not necessary???)"
   echo "     Since Meteor handles rebuilding binary dependencies itself now, it's not entirely"

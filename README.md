@@ -13,7 +13,7 @@ There are two main ways you can use Docker with Meteor apps. They are:
 
 ### 1. Build a Docker image for your app
 
-With this method, your app will be converted into a Docker image. Then you can simply run that image.  
+With this method, your app will be converted into a Docker image. Then you can simply run that image.
 
 For that, you can use `meteorhacks/meteord:onbuild` as your base image. Magically, that's only thing you have to do. Here's how to do it:
 
@@ -69,7 +69,7 @@ With this method, MeteorD looks for the tarball version of the meteor bundle. So
 meteor build --architecture=os.linux.x86_64 ./
 ~~~
 
-#### 2.1 From the Web
+#### 2.1 From the Web ( no longer supported )
 
 You can also simply give URL of the tarball with `BUNDLE_URL` environment variable. Then MeteorD will fetch the bundle and run it. This is how to do it:
 
@@ -106,7 +106,7 @@ When using Docker Compose to start a Meteor container with a Mongo container as 
 
 This sample docker-compose.yml file starts up a container that has used meteorhacks/meterod as its base and a mongo container. It also passes along several variables to Meteor needed to start up, specifies the port number the container will listen on, and waits 30 seconds for the mongodb container to start up before starting up the Meteor container.
 
-#### Rebuilding Binary Modules
+#### Rebuilding Binary Modules ( no longer supported )
 
 Sometimes, you need to rebuild binary npm modules. If so, expose `REBUILD_NPM_MODULES` environment variable. It will take couple of seconds to complete the rebuilding process.
 
